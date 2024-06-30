@@ -1,6 +1,3 @@
-# https://github.com/nguyenvanhieuvn/text-classification-tutorial/blob/master/text_classification_tutorial.ipynb
-# https://nguyenvanhieu.vn/phan-loai-van-ban-tieng-viet
-
 import regex as re
 import string
 import emoji
@@ -129,9 +126,6 @@ def standardize_sentence_typing(text):
         words[index] = ''.join(cw)
     return ' '.join(words)
 
-
-# Normalize acronyms
-# !wget https://gist.githubusercontent.com/nguyenvanhieuvn/7d9441c10b3c2739499fc5a4d9ea06fb/raw/df939245b3e841b62af115be4dcb3516dadc9fc5/teencode.txt
 replace_list = {
     'ô kêi': 'ok', 'okie': 'ok', 'o kê': 'ok', 'okey': 'ok', 'ôkê': 'ok', 'oki': 'ok', 'oke': 'ok', 'okay': 'ok', 'okê': 'ok',
     'tks': 'cảm ơn', 'thks': 'cảm ơn', 'thanks': 'cảm ơn', 'ths': 'cảm ơn', 'thank': 'cảm ơn',
