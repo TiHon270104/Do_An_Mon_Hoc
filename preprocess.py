@@ -126,44 +126,6 @@ def standardize_sentence_typing(text):
         words[index] = ''.join(cw)
     return ' '.join(words)
 
-replace_list = {
-    'ô kêi': 'ok', 'okie': 'ok', 'o kê': 'ok', 'okey': 'ok', 'ôkê': 'ok', 'oki': 'ok', 'oke': 'ok', 'okay': 'ok', 'okê': 'ok',
-    'tks': 'cảm ơn', 'thks': 'cảm ơn', 'thanks': 'cảm ơn', 'ths': 'cảm ơn', 'thank': 'cảm ơn',
-    'kg': 'không', 'not': 'không', 'k': 'không', 'kh': 'không', 'kô': 'không', 'hok': 'không', 'ko': 'không', 'khong': 'không', 'kp': 'không phải',
-    'he he': 'tích cực', 'hehe': 'tích cực', 'hihi': 'tích cực', 'haha': 'tích cực', 'hjhj': 'tích cực', 'thick': 'tích cực',
-    'cc': 'tiêu cực', 'huhu': 'tiêu cực', 'cute': 'dễ thương',
-     
-    'sz': 'cỡ', 'size': 'cỡ', 
-    'wa': 'quá', 'wá': 'quá', 'qá': 'quá', 
-    'đx': 'được', 'dk': 'được', 'dc': 'được', 'đk': 'được', 'đc': 'được', 
-    'vs': 'với', 'j': 'gì', '“': ' ', 'time': 'thời gian', 'm': 'mình', 'mik': 'mình', 'r': 'rồi', 'bjo': 'bao giờ', 'very': 'rất',
-
-    'authentic': 'chuẩn chính hãng', 'aut': 'chuẩn chính hãng', 'auth': 'chuẩn chính hãng', 'date': 'hạn sử dụng', 'hsd': 'hạn sử dụng', 
-    'store': 'cửa hàng', 'sop': 'cửa hàng', 'shopE': 'cửa hàng', 'shop': 'cửa hàng', 
-    'sp': 'sản phẩm', 'product': 'sản phẩm', 'hàg': 'hàng', 
-    'ship': 'giao hàng', 'delivery': 'giao hàng', 'síp': 'giao hàng', 'order': 'đặt hàng',
-
-    'gud': 'tốt', 'wel done': 'tốt', 'good': 'tốt', 'gút': 'tốt', 'tot': 'tốt', 'nice': 'tốt', 'perfect': 'rất tốt', 
-    'quality': 'chất lượng', 'chất lg': 'chất lượng', 'chat': 'chất', 'excelent': 'hoàn hảo', 'bt': 'bình thường',
-    'sad': 'tệ', 'por': 'tệ', 'poor': 'tệ', 'bad': 'tệ', 
-    'beautiful': 'đẹp tuyệt vời', 'dep': 'đẹp', 
-    'xau': 'xấu', 'sấu': 'xấu', 
-     
-    'thik': 'thích', 'iu': 'yêu', 'fake': 'giả mạo', 
-    'quickly': 'nhanh', 'quick': 'nhanh', 'fast': 'nhanh',
-    'fresh': 'tươi', 'delicious': 'ngon',
-
-    'dt': 'điện thoại', 'fb': 'facebook', 'face': 'facebook', 'ks': 'khách sạn', 'nv': 'nhân viên',
-    'nt': 'nhắn tin', 'ib': 'nhắn tin', 'tl': 'trả lời', 'trl': 'trả lời', 'rep': 'trả lời',
-    'fback': 'feedback', 'fedback': 'feedback',
-    'sd': 'sử dụng', 'sài': 'xài', 
-
-    '^_^': 'tích cực', ':)': 'tích cực', ':(': 'tiêu cực',
-    '❤️': 'tích cực', '👍': 'tích cực', '🎉': 'tích cực', '😀': 'tích cực', '😍': 'tích cực', '😂': 'tích cực', '🤗': 'tích cực', '😙': 'tích cực', '🙂': 'tích cực', 
-    '😔': 'tiêu cực', '😓': 'tiêu cực', 
-    '⭐': 'star', '*': 'star', '🌟': 'star',
-}
-
 with open('teencode.txt', encoding='utf-8') as f:
     for pair in f.readlines():
         key, value = pair.split('\t')
